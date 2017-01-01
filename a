@@ -1,0 +1,20 @@
+#Oğuzhan Python Final
+
+sutun2 = []
+fo = open("dr_S03_2_2018_800.txt", "r")
+for line in fo.readlines():
+    sutun2.append(int(line[11:14]))
+    sutun2.sort()
+print sutun2
+
+for search in sutun2:
+    toplam = sutun2[-1]
+    lists = []
+    while(toplam < 600):
+        toplam = toplam + sutun2[0]
+        lists.append(sutun2[0])
+        del sutun2[0]
+    lists.append(sutun2[-1])
+    del sutun2[-1]
+    lists.sort()
+    print lists
